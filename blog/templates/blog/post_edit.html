@@ -1,0 +1,220 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Post Edit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+  <style>
+  /* Remove the navbar's default margin-bottom and rounded borders */ 
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+
+  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+  .row.content {height: 450px}
+
+  /* Set gray background color and 100% height */
+  .sidenav {
+    padding-top: 20px;
+    background-color: #f1f1f1;
+    height: 100%;
+  }
+
+  /* On small screens, set height to 'auto' for sidenav and grid */
+  @media screen and (max-width: 767px) {
+    .sidenav {
+      height: auto;
+      padding: 15px;
+    }
+    .row.content {height:auto;} 
+  }
+  .primary-font{
+    font-size:20px;
+  }
+  .p{
+    float:left;
+
+  }
+  .color{
+    color: white;
+  }
+   /*.grad {
+    background: linear-gradient(to bottom, #33ccff 0%, #660033 100%);
+    }*/
+    
+    
+
+
+
+/*.card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px; 
+        }*/
+      </style>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">News Feed</a>
+      </li>
+     
+  </ul>
+</div>
+    <ul class="nav navbar-nav navbar-right bg-dark">
+
+     <li class="dropdown "> 
+      <a class="dropdown-toggle color " data-toggle="dropdown" href="#" aria-expanded="false">
+        <img class="d-flex mr-3 rounded-circle" src="{% static "blog/user1.png" %}" width="30px" alt>
+      </a>
+      <ul class="dropdown-menu dropdown-user">
+        <li>
+          <a href="#">
+            <img class="d-flex mr-3 rounded-circle p" src="{% static "blog/user2.jpg" %}" width="30px" alt>
+            <div>
+              <a href="# text-left">User Profile</a>
+            </div>
+          </a>
+        </li>
+        <hr>
+
+        <li>
+          <a href="#">
+            <img class="d-flex mr-3 rounded-circle p" src="{% static "blog/sett.jpg" %}" width="30px" alt>
+            <div>
+              <a href="#">Settings</a>
+            </div>
+          </a>
+        </li>
+        <hr>
+        <li>
+          <a href="#">
+            <img class="d-flex mr-3 rounded-circle p" src="{% static "blog/logout.jpg" %}" width="30px" alt>
+            <a href="#">Logout</a>
+          </a>
+        </li>
+
+        
+      </ul>
+
+    </li>
+
+
+
+    <li>
+     <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <div class="input-group-append">
+        <button class="btn btn-outline-secondary color" type="button" >Search</button>
+      </div>
+    </div>
+
+  </li>
+
+
+
+
+</ul>
+
+</nav>
+
+<div class="container-fluid text-center grad">    
+
+  <div class="row"> 
+    <div class="col-sm-2 ">
+
+      <div class="card w-30" style="margin-top: 20px">
+        <img class="card-img-top" src="{% static "blog/download.jpg" %}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">Srishti Vashishtha</h5>
+          <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+          <a href="#">About</a>&nbsp;&nbsp;
+
+          <a href="#">Edit Profile</a>
+
+
+        </div>
+      </div>
+    </div>
+
+      
+    <div class="col-sm-7 " style="margin-top: 20px">
+      <h1>New post</h1>
+      <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+      </form>
+
+    </div>
+
+    <div class="col-sm-2 ">
+      <div class="card" style=" margin-top: 20px; width: 18rem;">
+        <div class="card-header text-left" >
+          <img class="d-flex mr-3 rounded-circle p" src="{% static "blog/noti.jpg" %}" width="    60px" alt>&nbsp;
+          <strong >Notifications</strong>
+        </div>
+        <div class="card-body">
+          <div class="card w-100" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+               <div class="media">
+                <img class="d-flex mr-3 rounded-circle" src="{% static "blog/comment.jpg" %}" width="30px" alt>
+                <div class="media-body">
+                  <div class="header">
+                    <a href="#"><em>New Comment</em></a>
+                  </div>
+                </div>
+              </di  v>
+            </li>
+            <li class="list-group-item">
+              <div class="media">
+                <img class="d-flex mr-3 rounded-circle" src="{% static "blog/folo.jpg" %}" width=   "30px" alt>
+                <div class="media-body">
+                  <div class="header">
+                    <a href="#" ><em >New Followers</em></a>
+                  </div>
+                </div>
+              </div> 
+            </li>
+
+         <li class="list-group-item">
+          <div class="media">
+            <img class="d-flex mr-3 rounded-circle" src="{% static "blog/messagesent.jpg" %}"     width="30px" alt>
+            <div class="media-body">
+              <div class="header">
+               <a href="#" ><em >Message Sent</em></a>
+             </div>
+            </div>
+          </div> 
+        </li>
+     </ul>
+   </div>
+   <br>
+   <div>
+    <button type="button" class="btn btn-secondary">View All Alerts</button>
+  </div>
+</div>
+</div>
+</body>
+</html>

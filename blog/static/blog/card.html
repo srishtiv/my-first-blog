@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+    .primary-font{
+      font-size:20px;
+    }
+    .p{
+      float:left;
+      
+    }
+    .color{
+      color: white;
+    }
+   /*.grad {
+    background: linear-gradient(to bottom, #33ccff 0%, #660033 100%);
+}*/
+    
+    
+
+
+
+/*.card {
+        margin: 0 auto; 
+        float: none; 
+        margin-bottom: 10px; 
+}*/
+  </style>
+</head>
+<body>
+
+<!--<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>-->
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">News Feed</a>
+      </li>
+      <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+
+      </li>-->
+    </ul>
+  </div>
+    <!--<form class="form-inline my-2 my-lg-0">
+      
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <div class="inner-addon right-addon">
+      <i class="glyphicon glyphicon-search"></i>
+      <input type="search" class="form-control mr" placeholder="Search" />
+    </div>-->
+    <ul class="nav navbar-nav navbar-right bg-dark">
+       
+       <li class="dropdown "> 
+          <a class="dropdown-toggle color " data-toggle="dropdown" href="#" aria-expanded="false">
+            <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\user1.png" width="30px" alt>
+          </a>
+            <ul class="dropdown-menu dropdown-user">
+              <li>
+                <a href="#">
+                  <img class="d-flex mr-3 rounded-circle p" src="C:\Users\DELL\Desktop\user2.jpg" width="30px" alt>
+                  <div>
+                  <a href="# text-left">User Profile</a>
+                </div>
+                </a>
+            </li>
+            <hr>
+
+            <li>
+                <a href="#">
+                  <img class="d-flex mr-3 rounded-circle p" src="C:\Users\DELL\Desktop\sett.jpg" width="30px" alt>
+                  <div>
+                  <a href="#">Settings</a>
+                </div>
+                </a>
+            </li>
+            <hr>
+            <li>
+                <a href="#">
+                  <img class="d-flex mr-3 rounded-circle p" src="C:\Users\DELL\Desktop\logout.jpg" width="30px" alt>
+                  <a href="#">Logout</a>
+                </a>
+            </li>
+         
+        
+      </ul>
+
+  </li>
+
+
+
+        <li>
+     <div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary color" type="button" >Search</button>
+  </div>
+</div>
+
+      </li>
+
+
+
+
+        </ul>
+
+</nav>
+  
+<div class="container-fluid text-center grad">    
+  
+
+    <!--<div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>Welcome</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>Test</h3>
+      <p>Lorem ipsum...</p>
+    </div>
+    <div class="col-sm-2 sidenav">
+      <div class="well">
+        <p>ADS</p>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>-->
+    <div class="row"> 
+  <div class="col-sm-2 ">
+   
+   <div class="card w-30">
+    <img class="card-img-top" src="C:\Users\DELL\Desktop\download.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Srishti Vashishtha</h5>
+    <!--<p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+    <a href="#">About</a>&nbsp;&nbsp;
+
+    <a href="#">Edit Profile</a>
+
+    
+  </div>
+</div>
+
+  <div class="card border-primary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Dekhlena Apne ap</div>
+  <div class="card-body text-primary">
+    <h5 class="card-title">Primary card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+    
+
+ </div>
+  <div class="col-sm-7 ">
+    <div class="card">
+  <div class="card-header">
+    Handled By Django
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+</div>
+</div>
+
+
+ <div class="col-sm-2 ">
+
+<!--  <div class="card-header">
+    <i class="fa fa-bell-o">
+    </i>
+   Notifications
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item list-group-item-action" href="#">
+
+      <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\avatar2.png" width="30px" alt>
+        <div class="media-body">
+          <strong>srishti Vashishtha</strong>
+          "posted an article"
+        </div>
+      </div>
+    </li>
+      
+    <li class="list-group-item">
+         <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\images.jpg" width="20px" alt>
+        <div class="media-body">
+          <strong>Chupa Rustam</strong>
+          "posted a comment"
+        </div>
+      </div>
+
+
+
+    </li>
+    <li class="list-group-item">
+       <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\images.jpg" width="20px" alt>
+        <div class="media-body">
+          <strong>Rachit</strong>
+          "posted a comment"
+        </div>
+      </div>
+
+
+    </li>
+  </ul>
+</div>-->
+<!--<div class="panel panel-default">
+  <div class="panel heading">
+    /*image*/
+    "Notifications
+                                        "
+  </div>
+  <div class="panel-body">
+    <div class="list-group">
+    <a href="#" class="list-group-item">
+     <!--image-
+     "New Comment
+                                            "
+    <span class="pull-right text-muted small">
+    <em>4 minutes ago</em>
+    </span>
+    </a>
+
+      <a href="#" class="list-group-item">
+     <!--image--
+     "3 New Followers
+                                            "
+    <span class="pull-right text-muted small">
+    <em>4 minutes ago</em>
+    </span>
+    </a>
+
+     <a href="#" class="list-group-item">
+     <!--image--
+     "3 New Followers
+                                            "
+    <span class="pull-right text-muted small">
+    <em>4 minutes ago</em>
+    </span>
+    </a>
+     <a href="#" class="list-group-item">
+     <!--image--
+     "Message Sent
+                                            "
+    <span class="pull-right text-muted small">
+    <em>11:32 AM</em>
+    </span>
+    </a>
+    <a href="#" class="btn-btn-default btn-block">View All Alerts</a>
+  </div>
+</div>-->
+
+
+<div class="card" style="width: 18rem;">
+ 
+  <div class="card-header text-left">
+     
+      <img class="d-flex mr-3 rounded-circle p" src="C:\Users\DELL\Desktop\noti.jpg" width="60px" alt>&nbsp;
+      <strong >Notifications</strong>
+           
+          
+          
+        
+      
+    
+  </div>
+  <div class="card-body">
+    <!--<h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+    <div class="card w-100" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+       <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\comment.jpg" width="30px" alt>
+        <div class="media-body">
+          <div class="header">
+            <a href="#"><em>New Comment</em></a>
+            
+          
+          
+        
+        </div>
+      </div>
+    </div>
+   </li>
+    <li class="list-group-item">
+     <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\folo.jpg" width="30px" alt>
+        <div class="media-body">
+          <div class="header">
+           <a href="#" ><em >New Followers</em></a>
+            </div>
+      </div>
+    </div> 
+
+
+    </li>
+    
+      <li class="list-group-item">
+     <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\messagesent.jpg" width="30px" alt>
+        <div class="media-body">
+          <div class="header">
+           <a href="#" ><em >Message Sent</em></a>
+            </div>
+      </div>
+    </div> 
+
+
+    </li>
+  </ul>
+</div>
+<br>
+<div>
+    <button type="button" class="btn btn-secondary">View All Alerts</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="card text-left " style="width: 18rem;">
+  <div class="card-header ">
+    <Strong class>Groups</Strong>
+     <img class="d-flex mr-3 rounded-circle p" src="C:\Users\DELL\Desktop\gro2.jpg" width="50px" alt>
+ 
+
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item left clearfix">
+       <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\groups.jpg" width="30px" alt>
+        <div class="media-body">
+          <div class="header">
+            <strong class="primary-font">Cse12</strong>
+            <div class="another">
+          <strong>srishti Vashishtha</strong>
+          "posted an article"
+        </div>
+        </div>
+      </div>
+    </div>
+
+
+    </li>
+    <li class="list-group-item ">
+      <div class="media right clearfix">
+       
+        <div class="media-body">
+          <div class="header">
+            <strong class="primary-font">Yaaron ka group</strong>
+            <div class="another">
+          <strong>Divyajeet Singh</strong>
+          "posted a comment"
+        </div>
+        </div>
+      </div>
+
+       <span class="chai-img pull-right">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\groups.jpg" width="30px" alt>
+      </span>
+
+
+
+    </div>
+
+    
+    <li class="list-group-item">
+
+
+       <div class="media">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\groups.jpg" width="30px" alt>
+        <div class="media-body">
+          <div class="header">
+            <strong class="primary-font">Cse12</strong>
+            <div class="another">
+              <div>
+          <strong>srishti Vashishtha</strong>
+        </div>
+        <div>
+           <strong>Rajat</strong>
+          </div>
+          <div>
+            <strong>rakshas</strong>
+          </div>
+             
+          
+        </div>
+        </div>
+      </div>
+      
+    </li>
+
+     <li class="list-group-item ">
+      <div class="media right clearfix">
+       
+        <div class="media-body">
+          <div class="header">
+            <strong class="primary-font">GADHE</strong>
+            <div class="another">
+          <strong>Chupa Rustam</strong>
+          "posted a comment"
+        </div>
+        </div>
+      </div>
+
+       <span class="chai-img pull-right">
+        <img class="d-flex mr-3 rounded-circle" src="C:\Users\DELL\Desktop\groups.jpg" width="30px" alt>
+      </span>
+
+
+
+    </div>
+
+    </li>
+
+
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+
+    
+
+
+
+ 
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
